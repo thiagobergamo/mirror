@@ -10,7 +10,7 @@ body{
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-h1{
+.titulo{
     background-image: url(../img/sobre-background.jpg);
     padding: 10px;
 }
