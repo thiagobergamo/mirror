@@ -1,0 +1,27 @@
+/* 
+    Created on : 21/04/2015, 13:07:21
+    Author     : thiago
+*/
+
+body{
+    color:#333333;
+    font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+.sacola{
+    background: url(../img/sacola.png) no-repeat top right;
+    font-size: 14px;
+    padding-top: 8px;
+    padding-right: 35px;
+    text-align: right;
+    width: 140px;
+}
+
+.menu-opcoes a{
+    color: #003366;
+}
+
+.menu-opcoes ul li{
+    display: inline;
+    margin-left: 20px;
+}
+
