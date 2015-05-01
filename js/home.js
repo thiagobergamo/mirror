@@ -1,13 +1,42 @@
 //functions
 
-function validaBusca() {
+var banners = ["img/destaque-home.png","img/destaque-home-2.png"];
+var bannerAtual = 0;
+
+function trocaBanner(){
+    bannerAtual = (bannerAtual + 1) % 2;
+    document.querySelector('.destaque img').src = banners[bannerAtual];
+}
+
+//timmers
+var timerBanner = setInterval(trocaBanner,4000);
+var controle = document.querySelector('.pause');
+
+// fazendo a associação da função com o evento
+document.querySelector('#form-busca').onsubmit = function(){
     if (document.querySelector('#q').value === '') {
         document.querySelector('#q').style.background = 'red';
         return false;
     }
-}
+};
 
-//events
-document.querySelector('#form-busca').attachEvent('onsubmit', function() {
-    validaBusca();
+document.querySelector('#q').onfocus = function(){
+  document.querySelector('#q').style.background = 'white';  
+};
+
+controle.onclick = function(){
+  if (controle.className === 'pause'){
+        clearInterval(timerBanner);
+        controle.className = 'play';
+  }  else {
+      timerBanner = setInterval(trocaBanner,4000);
+      controle.className = 'pause';
+  }
+  return false;
+};
+
+document.querySelector('#q').addEventListener('click', function(){
+   alert(1); 
 });
+
+
